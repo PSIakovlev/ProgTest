@@ -1,10 +1,10 @@
 import pandas as pd
 
 
-def phone_to_hash(phone: str) -> str:
+def phone_to_hash(phone: str) -> int:
     """Функция преобразования номера в хэш"""
     phone = phone.replace("+7985", "+7985-").replace("8985", "+7985-")
-    return phone
+    return hash(phone)
 
 
 def process_csv(input_file: str) -> None:
